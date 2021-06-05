@@ -12,4 +12,5 @@ class SentimentAnalyzer:
         self.path = path
         self.model_type = model_type
         self.tokenizer = AlbertTokenizer.from_pretrained(self.model_type, do_lower_case=True)
-        self.mode
+        self.model = AlbertForSequenceClassification.from_pretrained(self.path)
+        self.device = "cuda" if torch.cuda.is_available() el
