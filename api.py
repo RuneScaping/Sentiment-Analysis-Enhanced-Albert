@@ -18,4 +18,9 @@ class SentimentAnalyzer:
         self.model.eval()
 
     def convert_to_features(self, sentence):
-   
+        
+        text_a = sentence
+        text_b = None
+        max_length = 512
+        pad_on_left = False
+        pad_token
