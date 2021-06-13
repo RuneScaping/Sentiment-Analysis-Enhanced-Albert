@@ -27,3 +27,7 @@ class SentimentAnalyzer:
         pad_token_segment_id = 0
         mask_padding_with_zero = True
             
+        inputs = self.tokenizer.encode_plus(
+            text_a,
+            text_b,
+            add_special_token
