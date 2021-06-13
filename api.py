@@ -23,4 +23,7 @@ class SentimentAnalyzer:
         text_b = None
         max_length = 512
         pad_on_left = False
-        pad_token
+        pad_token = self.tokenizer.convert_tokens_to_ids([self.tokenizer.pad_token])[0]
+        pad_token_segment_id = 0
+        mask_padding_with_zero = True
+            
