@@ -30,4 +30,6 @@ class SentimentAnalyzer:
         inputs = self.tokenizer.encode_plus(
             text_a,
             text_b,
-            add_special_token
+            add_special_tokens=True,
+            max_length=max_length)
+        input_ids, token_type_ids = inputs["input_ids"], inputs["token_type_i
