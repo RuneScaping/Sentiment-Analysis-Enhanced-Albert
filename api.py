@@ -39,4 +39,7 @@ class SentimentAnalyzer:
         attention_mask = [1 if mask_padding_with_zero else 0] * len(input_ids)
 
         # Zero-pad up to the sequence length.
-        paddi
+        padding_length = max_length - len(input_ids)
+        if pad_on_left:
+            input_ids = ([pad_token] * padding_length) + input_ids
+       
