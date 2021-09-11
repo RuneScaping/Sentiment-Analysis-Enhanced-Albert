@@ -42,4 +42,5 @@ class SentimentAnalyzer:
         padding_length = max_length - len(input_ids)
         if pad_on_left:
             input_ids = ([pad_token] * padding_length) + input_ids
-       
+            attention_mask = ([0 if mask_padding_with_zero else 1] * padding_length) + attention_mask
+            token_
