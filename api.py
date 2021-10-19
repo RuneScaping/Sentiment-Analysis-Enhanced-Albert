@@ -48,4 +48,8 @@ class SentimentAnalyzer:
             input_ids = input_ids + ([pad_token] * padding_length)
             attention_mask = attention_mask + ([0 if mask_padding_with_zero else 1] * padding_length)
             token_type_ids = token_type_ids + ([pad_token_segment_id] * padding_length)
-        return [input_ids, attention_mask, token_type_i
+        return [input_ids, attention_mask, token_type_ids]
+
+    def convert_to_tensors(self, features):
+        input_ids = torch.tensor([features[0]],
+           
