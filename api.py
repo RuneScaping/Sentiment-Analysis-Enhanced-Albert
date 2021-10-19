@@ -55,4 +55,7 @@ class SentimentAnalyzer:
                                  dtype=torch.long)
 
         attention_mask = torch.tensor([features[1]],
-                              
+                                      dtype=torch.long)
+
+        token_type_ids = torch.tensor([features[2]],
+                                      dtype=torc
