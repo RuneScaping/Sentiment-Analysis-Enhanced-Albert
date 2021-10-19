@@ -52,4 +52,7 @@ class SentimentAnalyzer:
 
     def convert_to_tensors(self, features):
         input_ids = torch.tensor([features[0]],
-           
+                                 dtype=torch.long)
+
+        attention_mask = torch.tensor([features[1]],
+                              
