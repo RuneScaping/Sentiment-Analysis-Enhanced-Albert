@@ -58,4 +58,8 @@ class SentimentAnalyzer:
                                       dtype=torch.long)
 
         token_type_ids = torch.tensor([features[2]],
-                                      dtype=torc
+                                      dtype=torch.long)
+
+        inputs = {'input_ids': input_ids,
+                  'attention_mask': attention_mask}
+        return in
