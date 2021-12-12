@@ -62,4 +62,9 @@ class SentimentAnalyzer:
 
         inputs = {'input_ids': input_ids,
                   'attention_mask': attention_mask}
-        return in
+        return inputs
+
+    def interpret_result(self, output):
+        result = {}
+        logits = F.softmax(output[0][0], dim=0)
+        logits_la
