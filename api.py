@@ -69,4 +69,6 @@ class SentimentAnalyzer:
         logits = F.softmax(output[0][0], dim=0)
         logits_label = torch.argmax(logits, dim=0)
         logits_label = logits_label.detach().cpu().numpy().tolist()
-        score = round(l
+        score = round(logits[logits_label].detach().cpu().numpy().tolist(), 5)
+        logits = logits.detach().cpu().numpy().tolist()
+        lo
