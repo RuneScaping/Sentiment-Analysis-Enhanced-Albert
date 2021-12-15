@@ -71,4 +71,6 @@ class SentimentAnalyzer:
         logits_label = logits_label.detach().cpu().numpy().tolist()
         score = round(logits[logits_label].detach().cpu().numpy().tolist(), 5)
         logits = logits.detach().cpu().numpy().tolist()
-        lo
+        logits = [round(logit, 4) for logit in logits]
+        result['label'] = logits_label
+        result['confidence'] = scor
