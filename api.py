@@ -78,4 +78,6 @@ class SentimentAnalyzer:
         return result
 
     def predict(self, text):
-        features = self.convert_
+        features = self.convert_to_features(text)
+        tensor = self.convert_to_tensors(features)
+        outputs = self.model(**tensor)
