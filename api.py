@@ -67,4 +67,6 @@ class SentimentAnalyzer:
     def interpret_result(self, output):
         result = {}
         logits = F.softmax(output[0][0], dim=0)
-        logits_la
+        logits_label = torch.argmax(logits, dim=0)
+        logits_label = logits_label.detach().cpu().numpy().tolist()
+        score = round(l
