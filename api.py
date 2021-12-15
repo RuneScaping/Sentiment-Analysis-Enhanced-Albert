@@ -73,4 +73,9 @@ class SentimentAnalyzer:
         logits = logits.detach().cpu().numpy().tolist()
         logits = [round(logit, 4) for logit in logits]
         result['label'] = logits_label
-        result['confidence'] = scor
+        result['confidence'] = score
+        result['logits'] = logits
+        return result
+
+    def predict(self, text):
+        features = self.convert_
