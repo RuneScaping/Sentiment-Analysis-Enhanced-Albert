@@ -81,3 +81,9 @@ class SentimentAnalyzer:
         features = self.convert_to_features(text)
         tensor = self.convert_to_tensors(features)
         outputs = self.model(**tensor)
+        result = self.interpret_result(outputs)
+        return result
+
+
+if __name__ ==  '__main__':
+    text = 'Movie was ve
