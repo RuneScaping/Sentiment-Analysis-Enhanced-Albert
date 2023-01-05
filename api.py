@@ -86,4 +86,6 @@ class SentimentAnalyzer:
 
 
 if __name__ ==  '__main__':
-    text = 'Movie was ve
+    text = 'Movie was very good'
+    analyzer = SentimentAnalyzer()
+    print(analyzer.predict(text))
