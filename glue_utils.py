@@ -35,4 +35,5 @@ class InputExample(object):
         guid: Unique id for the example.
         text_a: string. The untokenized text of the first sequence. For single
         sequence tasks, only this sequence must be specified.
-      
+        text_b: (Optional) string. The untokenized text of the second sequence.
+        Only must be specified for sequence pair ta
