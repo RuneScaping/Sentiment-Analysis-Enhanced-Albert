@@ -29,4 +29,7 @@ logger = logging.getLogger(__name__)
 
 class InputExample(object):
     """
-    A
+    A single training/test example for simple sequence classification.
+
+    Args:
+        guid: Unique id for the example.
