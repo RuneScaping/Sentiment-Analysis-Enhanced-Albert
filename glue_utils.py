@@ -33,3 +33,6 @@ class InputExample(object):
 
     Args:
         guid: Unique id for the example.
+        text_a: string. The untokenized text of the first sequence. For single
+        sequence tasks, only this sequence must be specified.
+      
