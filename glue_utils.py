@@ -36,4 +36,6 @@ class InputExample(object):
         text_a: string. The untokenized text of the first sequence. For single
         sequence tasks, only this sequence must be specified.
         text_b: (Optional) string. The untokenized text of the second sequence.
-        Only must be specified for sequence pair ta
+        Only must be specified for sequence pair tasks.
+        label: (Optional) string. The label of the example. This should be
+        specified for train and dev examp
