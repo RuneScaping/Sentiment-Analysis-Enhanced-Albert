@@ -38,4 +38,7 @@ class InputExample(object):
         text_b: (Optional) string. The untokenized text of the second sequence.
         Only must be specified for sequence pair tasks.
         label: (Optional) string. The label of the example. This should be
-        specified for train and dev examp
+        specified for train and dev examples, but not for test examples.
+    """
+    def __init__(self, guid, text_a, text_b=None, label=None):
+        self.guid =
