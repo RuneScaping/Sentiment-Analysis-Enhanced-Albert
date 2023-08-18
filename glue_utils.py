@@ -41,4 +41,10 @@ class InputExample(object):
         specified for train and dev examples, but not for test examples.
     """
     def __init__(self, guid, text_a, text_b=None, label=None):
-        self.guid =
+        self.guid = guid
+        self.text_a = text_a
+        self.text_b = text_b
+        self.label = label
+
+    def __repr__(self):
+      
