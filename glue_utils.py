@@ -55,4 +55,8 @@ class InputExample(object):
         return output
 
     def to_json_string(self):
-        """Serializ
+        """Serializes this instance to a JSON string."""
+        return json.dumps(self.to_dict(), indent=2, sort_keys=True) + "\n"
+
+
+class InputFeatures(
