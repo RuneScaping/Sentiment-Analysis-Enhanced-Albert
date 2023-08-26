@@ -65,3 +65,6 @@ class InputFeatures(object):
 
     Args:
         input_ids: Indices of input sequence tokens in the vocabulary.
+        attention_mask: Mask to avoid performing attention on padding token indices.
+            Mask values selected in ``[0, 1]``:
+         
