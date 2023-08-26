@@ -59,4 +59,9 @@ class InputExample(object):
         return json.dumps(self.to_dict(), indent=2, sort_keys=True) + "\n"
 
 
-class InputFeatures(
+class InputFeatures(object):
+    """
+    A single set of features of data.
+
+    Args:
+        input_ids: Indices of input sequence tokens in the vocabulary.
