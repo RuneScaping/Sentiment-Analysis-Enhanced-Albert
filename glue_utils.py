@@ -79,4 +79,8 @@ class InputFeatures(object):
         self.label = label
 
     def __repr__(self):
-        re
+        return str(self.to_json_string())
+
+    def to_dict(self):
+        """Serializes this instance to a Python dictionary."""
+        output = cop
