@@ -83,4 +83,8 @@ class InputFeatures(object):
 
     def to_dict(self):
         """Serializes this instance to a Python dictionary."""
-        output = cop
+        output = copy.deepcopy(self.__dict__)
+        return output
+
+    def to_json_string(self):
+        """Serializes this instance to a J
