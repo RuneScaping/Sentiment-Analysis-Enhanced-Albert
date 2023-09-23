@@ -95,4 +95,7 @@ class DataProcessor(object):
     """Base class for data converters for sequence classification data sets."""
 
     def get_example_from_tensor_dict(self, tensor_dict):
-      
+        """Gets an example from a dict with tensorflow tensors
+
+        Args:
+            tensor_dict: Keys and values should match the 
