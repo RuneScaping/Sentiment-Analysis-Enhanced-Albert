@@ -92,4 +92,7 @@ class InputFeatures(object):
 
 
 class DataProcessor(object):
-    """Base c
+    """Base class for data converters for sequence classification data sets."""
+
+    def get_example_from_tensor_dict(self, tensor_dict):
+      
