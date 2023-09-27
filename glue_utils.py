@@ -116,4 +116,5 @@ class DataProcessor(object):
         raise NotImplementedError()
 
     def tfds_map(self, example):
-        """Some tensorflow_dat
+        """Some tensorflow_datasets datasets are not formatted the same way the GLUE datasets are. 
+        This method converts examples
