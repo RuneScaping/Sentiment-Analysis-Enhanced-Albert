@@ -131,4 +131,9 @@ class DataProcessor(object):
             temp = []
             temp.append(item[1][0])
             temp.append(item[1][1])
-            lines.
+            lines.append(temp)
+        return lines
+
+
+def glue_convert_examples_to_features(examples, tokenizer,
+                               
