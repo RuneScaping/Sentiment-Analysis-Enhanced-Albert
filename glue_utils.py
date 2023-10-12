@@ -127,4 +127,8 @@ class DataProcessor(object):
         """Reads a tab separated value file."""
         lines = []
         df = pd.read_csv(input_file, delimiter='\t')
-        for item
+        for item in df.iterrows():
+            temp = []
+            temp.append(item[1][0])
+            temp.append(item[1][1])
+            lines.
