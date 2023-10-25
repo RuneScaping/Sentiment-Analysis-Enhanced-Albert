@@ -139,3 +139,6 @@ def glue_convert_examples_to_features(examples, tokenizer,
                                       max_length=256,
                                       task=None,
                                       label_list=None,
+                                      output_mode=None,
+                                      pad_on_left=False,
+                    
