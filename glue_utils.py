@@ -141,4 +141,6 @@ def glue_convert_examples_to_features(examples, tokenizer,
                                       label_list=None,
                                       output_mode=None,
                                       pad_on_left=False,
-                    
+                                      pad_token=0,
+                                      pad_token_segment_id=0,
+                                      mask_pa
