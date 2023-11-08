@@ -148,4 +148,5 @@ def glue_convert_examples_to_features(examples, tokenizer,
     Loads a data file into a list of ``InputFeatures``
 
     Args:
-        examples:
+        examples: List of ``InputExamples`` or ``tf.data.Dataset`` containing the examples.
+        tokenizer: Instance of a tokenizer that will tokenize
