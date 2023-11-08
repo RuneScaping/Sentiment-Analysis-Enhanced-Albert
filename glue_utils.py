@@ -152,4 +152,5 @@ def glue_convert_examples_to_features(examples, tokenizer,
         tokenizer: Instance of a tokenizer that will tokenize the examples
         max_length: Maximum example length
         task: GLUE task
-        label_list: List of labels. Can be o
+        label_list: List of labels. Can be obtained from the processor using the ``processor.get_labels()`` method
+        output_mode: String indicating the out
