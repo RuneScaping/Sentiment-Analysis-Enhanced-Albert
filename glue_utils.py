@@ -149,4 +149,7 @@ def glue_convert_examples_to_features(examples, tokenizer,
 
     Args:
         examples: List of ``InputExamples`` or ``tf.data.Dataset`` containing the examples.
-        tokenizer: Instance of a tokenizer that will tokenize
+        tokenizer: Instance of a tokenizer that will tokenize the examples
+        max_length: Maximum example length
+        task: GLUE task
+        label_list: List of labels. Can be o
