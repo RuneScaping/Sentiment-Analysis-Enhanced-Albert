@@ -143,4 +143,9 @@ def glue_convert_examples_to_features(examples, tokenizer,
                                       pad_on_left=False,
                                       pad_token=0,
                                       pad_token_segment_id=0,
-                                      mask_pa
+                                      mask_padding_with_zero=True):
+    """
+    Loads a data file into a list of ``InputFeatures``
+
+    Args:
+        examples:
