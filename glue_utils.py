@@ -153,4 +153,5 @@ def glue_convert_examples_to_features(examples, tokenizer,
         max_length: Maximum example length
         task: GLUE task
         label_list: List of labels. Can be obtained from the processor using the ``processor.get_labels()`` method
-        output_mode: String indicating the out
+        output_mode: String indicating the output mode. Either ``regression`` or ``classification``
+        pad_on_left: If set to ``True``, the examples will be padded on the le
