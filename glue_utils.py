@@ -157,4 +157,5 @@ def glue_convert_examples_to_features(examples, tokenizer,
         pad_on_left: If set to ``True``, the examples will be padded on the left rather than on the right (default)
         pad_token: Padding token
         pad_token_segment_id: The segment ID for the padding token (It is usually 0, but can vary such as for XLNet where it is 4)
-        mask_padding_with_zero: If set to ``True
+        mask_padding_with_zero: If set to ``True``, the attention mask will be filled by ``1`` for actual values
+            and by ``0`` for padded values. If set to ``False``, i
