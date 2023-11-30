@@ -162,4 +162,5 @@ def glue_convert_examples_to_features(examples, tokenizer,
             actual values)
 
     Returns:
-        If the ``examples`` input is 
+        If the ``examples`` input is a ``tf.data.Dataset``, will return a ``tf.data.Dataset``
+        containing the task-specific features. If the input is a li
