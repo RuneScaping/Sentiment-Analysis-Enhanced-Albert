@@ -167,4 +167,7 @@ def glue_convert_examples_to_features(examples, tokenizer,
         a list of task-specific ``InputFeatures`` which can be fed to the model.
 
     """
-    if task
+    if task is not None:
+        processor = glue_processors[task]()
+        if label_list is None:
+            label_lis
