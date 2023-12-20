@@ -170,4 +170,6 @@ def glue_convert_examples_to_features(examples, tokenizer,
     if task is not None:
         processor = glue_processors[task]()
         if label_list is None:
-            label_lis
+            label_list = processor.get_labels()
+            logger.info("Using label list %s for task %s" % (label_list, task))
+        if output_mo
