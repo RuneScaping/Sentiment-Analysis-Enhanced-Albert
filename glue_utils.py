@@ -172,4 +172,6 @@ def glue_convert_examples_to_features(examples, tokenizer,
         if label_list is None:
             label_list = processor.get_labels()
             logger.info("Using label list %s for task %s" % (label_list, task))
-        if output_mo
+        if output_mode is None:
+            output_mode = glue_output_modes[task]
+            logger.info("Using output mode %s for task
