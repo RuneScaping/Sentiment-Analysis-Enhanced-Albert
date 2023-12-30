@@ -174,4 +174,9 @@ def glue_convert_examples_to_features(examples, tokenizer,
             logger.info("Using label list %s for task %s" % (label_list, task))
         if output_mode is None:
             output_mode = glue_output_modes[task]
-            logger.info("Using output mode %s for task
+            logger.info("Using output mode %s for task %s" % (output_mode, task))
+
+    label_map = {label: i for i, label in enumerate(label_list)}
+
+    features = []
+    for (ex
