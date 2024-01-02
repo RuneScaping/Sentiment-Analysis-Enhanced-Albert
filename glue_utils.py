@@ -183,4 +183,8 @@ def glue_convert_examples_to_features(examples, tokenizer,
 
         inputs = tokenizer.encode_plus(
             example.text_a,
-        
+            example.text_b,
+            add_special_tokens=True,
+            max_length=max_length,
+        )
+        input_ids, token_type_
