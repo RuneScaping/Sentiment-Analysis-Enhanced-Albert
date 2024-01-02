@@ -179,4 +179,8 @@ def glue_convert_examples_to_features(examples, tokenizer,
     label_map = {label: i for i, label in enumerate(label_list)}
 
     features = []
-    for (ex
+    for (ex_index, example) in enumerate(examples):
+
+        inputs = tokenizer.encode_plus(
+            example.text_a,
+        
