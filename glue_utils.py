@@ -191,4 +191,8 @@ def glue_convert_examples_to_features(examples, tokenizer,
 
         # The mask has 1 for real tokens and 0 for padding tokens. Only real
         # tokens are attended to.
-        attention_mask = [1 if mask_padding_with_zero else 0] * len(inpu
+        attention_mask = [1 if mask_padding_with_zero else 0] * len(input_ids)
+
+        # Zero-pad up to the sequence length.
+        padding_length = max_length - len(input_ids)
+        if pad_on_left
