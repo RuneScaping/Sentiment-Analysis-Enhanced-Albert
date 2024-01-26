@@ -202,4 +202,6 @@ def glue_convert_examples_to_features(examples, tokenizer,
         else:
             input_ids = input_ids + ([pad_token] * padding_length)
             attention_mask = attention_mask + ([0 if mask_padding_with_zero else 1] * padding_length)
-            token_type_ids = token_type_ids + ([pad_token_segme
+            token_type_ids = token_type_ids + ([pad_token_segment_id] * padding_length)
+
+        assert len(input_ids) == max_length, "Error with input length {} vs {}".format(len(input_ids),
