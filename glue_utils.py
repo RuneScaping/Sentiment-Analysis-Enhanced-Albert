@@ -206,4 +206,9 @@ def glue_convert_examples_to_features(examples, tokenizer,
 
         assert len(input_ids) == max_length, "Error with input length {} vs {}".format(len(input_ids), max_length)
         assert len(attention_mask) == max_length, "Error with input length {} vs {}".format(len(attention_mask), max_length)
-        assert len(token_type_ids) == max_length, "Error with input length {} vs {}".format(len(token_type_ids), m
+        assert len(token_type_ids) == max_length, "Error with input length {} vs {}".format(len(token_type_ids), max_length)
+
+        label = label_map[str(example.label)]
+        
+        features.append(
+                InputFeatures(inp
