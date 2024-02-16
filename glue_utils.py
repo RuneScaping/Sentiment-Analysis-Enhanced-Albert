@@ -218,4 +218,7 @@ def glue_convert_examples_to_features(examples, tokenizer,
     return features
 
 
-class Sst2Processor(Dat
+class Sst2Processor(DataProcessor):
+    """Processor for the SST-2 data set (GLUE version)."""
+
+    def get_example_from_tensor_dict(self, tensor_di
