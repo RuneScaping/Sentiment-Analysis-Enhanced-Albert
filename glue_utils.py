@@ -213,4 +213,9 @@ def glue_convert_examples_to_features(examples, tokenizer,
         features.append(
                 InputFeatures(input_ids=input_ids,
                               attention_mask=attention_mask,
-                              token_
+                              token_type_ids=token_type_ids,
+                              label=label))
+    return features
+
+
+class Sst2Processor(Dat
