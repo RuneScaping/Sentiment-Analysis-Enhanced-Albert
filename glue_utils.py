@@ -211,4 +211,6 @@ def glue_convert_examples_to_features(examples, tokenizer,
         label = label_map[str(example.label)]
         
         features.append(
-                InputFeatures(inp
+                InputFeatures(input_ids=input_ids,
+                              attention_mask=attention_mask,
+                              token_
