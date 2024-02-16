@@ -221,4 +221,7 @@ def glue_convert_examples_to_features(examples, tokenizer,
 class Sst2Processor(DataProcessor):
     """Processor for the SST-2 data set (GLUE version)."""
 
-    def get_example_from_tensor_dict(self, tensor_di
+    def get_example_from_tensor_dict(self, tensor_dict):
+        """See base class."""
+        return InputExample(tensor_dict['idx'].numpy(),
+                            tensor_dict['sentence'].numpy().decod
