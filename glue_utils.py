@@ -226,4 +226,9 @@ class Sst2Processor(DataProcessor):
         return InputExample(tensor_dict['idx'].numpy(),
                             tensor_dict['sentence'].numpy().decode('utf-8'),
                             None,
-                            str(tensor_dict['label'].nump
+                            str(tensor_dict['label'].numpy()))
+
+    def get_train_examples(self, data_dir):
+        """See base class."""
+        return self._create_examples(
+            self._read_t
