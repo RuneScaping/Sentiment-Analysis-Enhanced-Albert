@@ -256,4 +256,8 @@ class Sst2Processor(DataProcessor):
         return examples
 
 class Sst5Processor(DataProcessor):
-    """Processor for the SST-5 data set (GLUE ve
+    """Processor for the SST-5 data set (GLUE version)."""
+
+    def get_example_from_tensor_dict(self, tensor_dict):
+        """See base class."""
+        return InputExamp
