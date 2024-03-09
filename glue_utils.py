@@ -260,4 +260,6 @@ class Sst5Processor(DataProcessor):
 
     def get_example_from_tensor_dict(self, tensor_dict):
         """See base class."""
-        return InputExamp
+        return InputExample(tensor_dict['idx'].numpy(),
+                            tensor_dict['sentence'].numpy().decode('utf-8'),
+                  
