@@ -252,4 +252,8 @@ class Sst2Processor(DataProcessor):
             text_a = line[0]
             label = line[1]
             examples.append(
-                InputExample(guid=guid, text_a=text_
+                InputExample(guid=guid, text_a=text_a, text_b=None, label=label))
+        return examples
+
+class Sst5Processor(DataProcessor):
+    """Processor for the SST-5 data set (GLUE ve
