@@ -262,4 +262,8 @@ class Sst5Processor(DataProcessor):
         """See base class."""
         return InputExample(tensor_dict['idx'].numpy(),
                             tensor_dict['sentence'].numpy().decode('utf-8'),
-                  
+                            None,
+                            str(tensor_dict['label'].numpy()))
+
+    def get_train_examples(self, data_dir):
+        """See base c
