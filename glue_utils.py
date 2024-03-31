@@ -284,4 +284,8 @@ class Sst5Processor(DataProcessor):
         examples = []
         for (i, line) in enumerate(lines):
             if i == 0:
-          
+                continue
+            guid = "%s-%s" % (set_type, i)
+            text_a = line[0]
+            label = line[1]
+            examples.ap
