@@ -280,4 +280,8 @@ class Sst5Processor(DataProcessor):
         return ["1", "2", "3", "4", "5"]
 
     def _create_examples(self, lines, set_type):
-        """Creates examples for t
+        """Creates examples for the training and dev sets."""
+        examples = []
+        for (i, line) in enumerate(lines):
+            if i == 0:
+          
