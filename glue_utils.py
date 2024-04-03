@@ -288,4 +288,9 @@ class Sst5Processor(DataProcessor):
             guid = "%s-%s" % (set_type, i)
             text_a = line[0]
             label = line[1]
-            examples.ap
+            examples.append(
+                InputExample(guid=guid, text_a=text_a, text_b=None, label=label))
+        return examples
+
+glue_tasks_num_labels = {
+  
