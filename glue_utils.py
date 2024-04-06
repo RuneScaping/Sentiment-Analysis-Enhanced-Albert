@@ -314,4 +314,7 @@ def simple_accuracy(preds, labels):
 
 def glue_compute_metrics(task_name, preds, labels):
     assert len(preds) == len(labels)
-    if task_name =
+    if task_name == "sst-2":
+        return {"acc": simple_accuracy(preds, labels)}
+    elif task_name == "sst-5":
+        return 
