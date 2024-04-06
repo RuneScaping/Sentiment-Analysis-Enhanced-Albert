@@ -302,4 +302,11 @@ glue_processors = {
     "sst-5": Sst5Processor,
 }
 
-glue_output_mo
+glue_output_modes = {
+    "sst-2": "classification",
+    "sst-5": "classification",
+}
+
+
+def simple_accuracy(preds, labels):
+        re
