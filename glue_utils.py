@@ -309,4 +309,9 @@ glue_output_modes = {
 
 
 def simple_accuracy(preds, labels):
-        re
+        return (preds == labels).mean()
+
+
+def glue_compute_metrics(task_name, preds, labels):
+    assert len(preds) == len(labels)
+    if task_name =
