@@ -293,4 +293,13 @@ class Sst5Processor(DataProcessor):
         return examples
 
 glue_tasks_num_labels = {
-  
+    "sst-2": 2,
+    "sst-5": 5,
+}
+
+glue_processors = {
+    "sst-2": Sst2Processor,
+    "sst-5": Sst5Processor,
+}
+
+glue_output_mo
