@@ -317,4 +317,6 @@ def glue_compute_metrics(task_name, preds, labels):
     if task_name == "sst-2":
         return {"acc": simple_accuracy(preds, labels)}
     elif task_name == "sst-5":
-        return 
+        return {"acc": simple_accuracy(preds, labels)}
+    else:
+        raise KeyError(task_name)
